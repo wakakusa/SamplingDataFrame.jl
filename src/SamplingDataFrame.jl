@@ -1,10 +1,10 @@
 module SamplingDataFrame
 
-using DataFrames
+    # Write your package code here.
+    using DataFrames,StatsBase
 
-export TestDataSetsNumbering
+    export TestDataSetsNumbering,CreateTestDataSets
 
-#テストデータと検証用データを作成するためのサンプリングを行なう
-include("TestDataSetsNumbering.jl")
-
-end # module
+    #テストデータと検証用データを作成するためのサンプリングを行なう
+    include("TestDataSetsNumbering.jl")
+end
