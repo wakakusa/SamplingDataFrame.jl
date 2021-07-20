@@ -1,5 +1,6 @@
 using SamplingDataFrame
 using Test
+using DataFrames
 
 @testset "SamplingDataFrame.jl" begin
     # Write your tests here.

@@ -17,7 +17,7 @@ function TestDataSetsNumbering(DF::DataFrame;PERCENTAGE::Float64=0.6)
 
   #学習用データの行番号を求める
   #Num(100分率)抽出するため、抽出対象行を作成
-  TrainingNumbering=sample(1:size(DF, 1), Int(ceil(PERCENTAGE * size(DF, 1))) ,replace=false, ordered=true)
+  TrainingNumbering=sample(1:size(DF, 1), Int(round(PERCENTAGE * size(DF, 1),RoundNearest)) ,replace=false, ordered=true)
 
   #評価用データの行番号を求める
   TestNumbering=setdiff(1:FullNumbering,TrainingNumbering)
